@@ -7,10 +7,10 @@
     Base on <a href="https://rustwasm.github.io/docs/wasm-bindgen/examples/console-log.html">console.log</a> without bundle.
     Please see results in the console.
     <script type="module">
-      import init, { run } from './pkg/hello_wasm.js';
+      import init from './pkg/hello_wasm.js';
       (async function load() {
-        await init();
-		run();
+        window.wasm = await init();
+        console.log({wasm});
       })();
     </script>
   </body>
