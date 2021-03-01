@@ -17,10 +17,10 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly run: () => void;
-  readonly bare_bones: () => void;
   readonly using_a_macro: () => void;
   readonly using_web_sys: () => void;
+  readonly run: () => void;
+  readonly bare_bones: () => void;
   readonly __wbindgen_start: () => void;
 }
 
