@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  </head>
+  <body>
+    <h1>Hello WASM</h1>
+    Base on <a href="https://rustwasm.github.io/docs/wasm-bindgen/examples/console-log.html">console.log</a> without bundle.
+    Please see results in the console.
+    <script type="module">
+      import init, { run } from './pkg/hello_wasm.js';
+      (async function load() {
+        await init();
+		run();
+      })();
+    </script>
+  </body>
+</html>
