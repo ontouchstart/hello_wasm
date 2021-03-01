@@ -9,8 +9,17 @@
     <script type="module">
       import init from './pkg/hello_wasm.js';
       (async function load() {
-        window.wasm = await init();
-        console.log({wasm});
+        window.init = init;
+        window.wasm = await init(); 
+        console.log({init, wasm});
+        for(const k in wasm) { 
+          console.log('Type of ', k, ' is ', typeof wasm[k]);
+          if((typeof wasm[k]) === 'function') {
+             console.log(`Begin function ${k}()`);
+             wasm[k]();
+             console.log(`End function ${k}()`);
+          }
+        }
       })();
     </script>
   </body>

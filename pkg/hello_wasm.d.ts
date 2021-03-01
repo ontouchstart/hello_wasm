@@ -3,12 +3,24 @@
 /**
 */
 export function run(): void;
+/**
+*/
+export function bare_bones(): void;
+/**
+*/
+export function using_a_macro(): void;
+/**
+*/
+export function using_web_sys(): void;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly run: () => void;
+  readonly bare_bones: () => void;
+  readonly using_a_macro: () => void;
+  readonly using_web_sys: () => void;
   readonly __wbindgen_start: () => void;
 }
 

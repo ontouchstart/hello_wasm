@@ -51,6 +51,24 @@ export function run() {
     wasm.run();
 }
 
+/**
+*/
+export function bare_bones() {
+    wasm.bare_bones();
+}
+
+/**
+*/
+export function using_a_macro() {
+    wasm.using_a_macro();
+}
+
+/**
+*/
+export function using_web_sys() {
+    wasm.using_web_sys();
+}
+
 async function load(module, imports) {
     if (typeof Response === 'function' && module instanceof Response) {
 
